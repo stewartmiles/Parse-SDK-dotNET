@@ -80,10 +80,12 @@
     <Copy SourceFiles="@(UnityProjectTemplateFiles)"
           DestinationFolder="$(UnityProjectIntermediatePath)\%(RecursiveDir)" />
     <Copy SourceFiles="..\Unity.Compat\$(OutputPath)\Unity.Compat.dll;
+                       ..\Unity.Compat.TypeForwards\$(OutputPath)\Unity.Compat.dll;
                        ..\Unity.Tasks\$(OutputPath)\Unity.Tasks.dll;
                        ..\Unity.Tasks.TypeForwards\$(OutputPath)\Unity.Tasks.dll;"
           DestinationFiles="
               $(UnityProjectIntermediatePath)\Assets\Parse\Plugins\Unity.Compat.dll;
+              $(UnityProjectIntermediatePath)\Assets\Parse\Plugins\dotNet45\Unity.Compat.dll;
               $(UnityProjectIntermediatePath)\Assets\Parse\Plugins\Unity.Tasks.dll;
               $(UnityProjectIntermediatePath)\Assets\Parse\Plugins\dotNet45\Unity.Tasks.dll;" />
   </Target>

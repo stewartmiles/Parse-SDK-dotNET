@@ -56,4 +56,10 @@
   <Target Name="AfterBuild">
   </Target>
   -->
+  <ItemGroup>
+    <ProjectReference Include="..\Unity.Compat.TypeForwards\Unity.Compat.TypeForwards.csproj">
+      <Project>{F4A424D3-1BBF-4F29-BE8E-D1336505987E}</Project>
+      <Name>Unity.Compat</Name>
+    </ProjectReference>
+  </ItemGroup>
 </Project>
