@@ -16,6 +16,7 @@ namespace System.Threading {
     internal CancellationTokenRegistration Register(Action action) {
       lock (mutex) {
         actions += action;
+         if (IsCancellationRequested) Cancel(false);
         return new CancellationTokenRegistration(this, action);
       }
     }
