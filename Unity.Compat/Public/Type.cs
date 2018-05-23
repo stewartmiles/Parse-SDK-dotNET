@@ -11,12 +11,12 @@ namespace System {
   /// This class simply implements some of the simple missing methods on Type to make it as API-compatible
   /// as possible to TypeInfo.
   /// </summary>
-  public static class TypeExtensions {
-    public static Type AsType(this Type type) {
+  internal static class TypeExtensions {
+    internal static Type AsType(this Type type) {
       return type;
     }
 
-    public static TypeInfo GetTypeInfo(this Type type) {
+    internal static TypeInfo GetTypeInfo(this Type type) {
       return TypeInfo.FromType(type);
     }
   }
